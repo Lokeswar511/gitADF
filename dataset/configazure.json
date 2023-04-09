@@ -1,0 +1,47 @@
+{
+	"name": "configazure",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "sourceId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "sourceSchema",
+				"type": "varchar"
+			},
+			{
+				"name": "sourceTable",
+				"type": "varchar"
+			},
+			{
+				"name": "sourceColumns",
+				"type": "varchar"
+			},
+			{
+				"name": "destinationContainer",
+				"type": "varchar"
+			},
+			{
+				"name": "destinationFolder",
+				"type": "varchar"
+			},
+			{
+				"name": "destinationFile",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "config",
+			"table": "tbl_data_source2"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
