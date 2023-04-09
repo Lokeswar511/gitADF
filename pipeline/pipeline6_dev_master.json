@@ -1,0 +1,17 @@
+{
+	"name": "pipeline6_dev_master",
+	"properties": {
+		"activities": [
+			{
+				"name": "Wait10 sec",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 10
+				}
+			}
+		],
+		"annotations": []
+	}
+}
