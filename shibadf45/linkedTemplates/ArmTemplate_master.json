@@ -1,0 +1,188 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "shibadf45"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
+		},
+		"AzureDataLakeStorageLokesh_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorageLokesh'"
+		},
+		"AzureDataLakeStoragemani_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStoragemani'"
+		},
+		"AzureDataLakeStoragestep3csa_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStoragestep3csa'"
+		},
+		"AzureDatabricks1_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'AzureDatabricks1'"
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'"
+		},
+		"check_file_size_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'check_file_size'"
+		},
+		"incremetgen2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'incremetgen2'"
+		},
+		"mani44833_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'mani44833'"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://shibastorage264.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorageLokesh_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://mani44833.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStoragemani_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://mani44833.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStoragestep3csa_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://step3csa.dfs.core.windows.net/"
+		},
+		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "0404-041859-heuu0zyf"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://databricksactivity.vault.azure.net/"
+		},
+		"AzureKeyVault2_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://databricksactivity.vault.azure.net/"
+		},
+		"incremetgen2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://karamdoasadl.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "shibadf45_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
+					"AzureDataLakeStorage1_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
+					},
+					"AzureDataLakeStorageLokesh_accountKey": {
+						"value": "[parameters('AzureDataLakeStorageLokesh_accountKey')]"
+					},
+					"AzureDataLakeStoragemani_accountKey": {
+						"value": "[parameters('AzureDataLakeStoragemani_accountKey')]"
+					},
+					"AzureDataLakeStoragestep3csa_accountKey": {
+						"value": "[parameters('AzureDataLakeStoragestep3csa_accountKey')]"
+					},
+					"AzureDatabricks1_accessToken": {
+						"value": "[parameters('AzureDatabricks1_accessToken')]"
+					},
+					"AzureSqlDatabase1_connectionString": {
+						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
+					},
+					"check_file_size_connectionString": {
+						"value": "[parameters('check_file_size_connectionString')]"
+					},
+					"incremetgen2_accountKey": {
+						"value": "[parameters('incremetgen2_accountKey')]"
+					},
+					"mani44833_connectionString": {
+						"value": "[parameters('mani44833_connectionString')]"
+					},
+					"AzureDataLakeStorage1_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorageLokesh_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorageLokesh_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStoragemani_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStoragemani_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStoragestep3csa_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStoragestep3csa_properties_typeProperties_url')]"
+					},
+					"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('AzureDatabricks1_properties_typeProperties_existingClusterId')]"
+					},
+					"AzureKeyVault1_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
+					},
+					"AzureKeyVault2_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault2_properties_typeProperties_baseUrl')]"
+					},
+					"incremetgen2_properties_typeProperties_url": {
+						"value": "[parameters('incremetgen2_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "shibadf45_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'shibadf45_ArmTemplate_0')]"
+			]
+		}
+	]
+}
