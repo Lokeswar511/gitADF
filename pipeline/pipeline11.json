@@ -82,6 +82,17 @@
 						"value": "@equals(activity('Get Metadatasrc').output.structure, activity('Get Metadatatarget').output.structure)",
 						"type": "Expression"
 					},
+					"ifFalseActivities": [
+						{
+							"name": "WaitFailure",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 1
+							}
+						}
+					],
 					"ifTrueActivities": [
 						{
 							"name": "Wait1Scussess",
