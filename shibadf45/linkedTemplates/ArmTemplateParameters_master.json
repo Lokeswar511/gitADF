@@ -29,6 +29,9 @@
 		"check_file_size_connectionString": {
 			"value": ""
 		},
+		"gen2april14_accountKey": {
+			"value": ""
+		},
 		"incremetgen2_accountKey": {
 			"value": ""
 		},
@@ -55,6 +58,9 @@
 		},
 		"AzureKeyVault2_properties_typeProperties_baseUrl": {
 			"value": "https://databricksactivity.vault.azure.net/"
+		},
+		"gen2april14_properties_typeProperties_url": {
+			"value": "https://karamdoasadl.dfs.core.windows.net/"
 		},
 		"incremetgen2_properties_typeProperties_url": {
 			"value": "https://karamdoasadl.dfs.core.windows.net/"
