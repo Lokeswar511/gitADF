@@ -1,0 +1,39 @@
+{
+	"name": "structuretablevalidation",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "containerName",
+				"type": "varchar"
+			},
+			{
+				"name": "fileName",
+				"type": "varchar"
+			},
+			{
+				"name": "structure",
+				"type": "varchar"
+			},
+			{
+				"name": "Active",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "config",
+			"table": "tbl_details"
+		}
+	}
+}
