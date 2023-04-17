@@ -1,0 +1,32 @@
+{
+	"name": "archiveds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sink_stagging",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"directroy": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@dataset().directroy",
+					"type": "Expression"
+				},
+				"fileSystem": "archieve"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

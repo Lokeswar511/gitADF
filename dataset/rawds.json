@@ -1,0 +1,32 @@
+{
+	"name": "rawds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sink_stagging",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"directory": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@dataset().directory",
+					"type": "Expression"
+				},
+				"fileSystem": "raw"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
